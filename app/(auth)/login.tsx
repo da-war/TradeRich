@@ -12,49 +12,51 @@ import BottomText from "@/components/auth/BottomText";
 
 const LoginScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.topContainer}>
-        <CText fontFamily={FONTS.thin} variant="h1">
-          Hello
-        </CText>
-        <CText fontFamily={FONTS.thin} variant="h7">
-          Invest • Pay • Loans
-        </CText>
-      </View>
-      <View style={styles.imageContainer}>
-        <Image
-          resizeMode="contain"
-          source={require("@/assets/images/login_animation_light.png")}
-          style={styles.image}
-        />
-      </View>
-      <SocialLoginButton
-        icon={
+    <SafeAreaView style={styles.main}>
+      <View style={styles.container}>
+        <View style={styles.topContainer}>
+          <CText fontFamily={FONTS.thin} variant="h1">
+            Hello
+          </CText>
+          <CText fontFamily={FONTS.thin} variant="h7">
+            Invest • Pay • Loans
+          </CText>
+        </View>
+        <View style={styles.imageContainer}>
           <Image
             resizeMode="contain"
-            style={{ width: 25, height: 25 }}
-            source={require("../../assets/images/google.png")}
+            source={require("@/assets/images/login_animation_light.png")}
+            style={styles.image}
           />
-        }
-        text="Continue with Google"
-        onPress={() => {}}
-      />
-      <SocialLoginButton
-        icon={<Ionicons name="logo-facebook" size={24} color="blue" />}
-        text="Continue with Google"
-        onPress={() => {}}
-      />
+        </View>
+        <SocialLoginButton
+          icon={
+            <Image
+              resizeMode="contain"
+              style={{ width: 25, height: 25 }}
+              source={require("../../assets/images/google.png")}
+            />
+          }
+          text="Continue with Google"
+          onPress={() => {}}
+        />
+        <SocialLoginButton
+          icon={<Ionicons name="logo-facebook" size={24} color="blue" />}
+          text="Continue with Google"
+          onPress={() => {}}
+        />
 
-      <View
-        style={{
-          flexDirection: "column",
-          gap: 10,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <TouchableText firstText="User other email ID " onPress={() => {}} />
-        <BottomText />
+        <View
+          style={{
+            flexDirection: "column",
+            gap: 10,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <TouchableText firstText="User other email ID " onPress={() => {}} />
+          <BottomText />
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -63,10 +65,15 @@ const LoginScreen = () => {
 export default LoginScreen;
 
 const styles = StyleSheet.create({
-  container: {
+  main: {
     flex: 1,
     backgroundColor: "white",
     padding: 20,
+  },
+  container: {
+    justifyContent: "center",
+    paddingTop: 20,
+    alignItems: "center",
   },
   topContainer: {
     justifyContent: "center",
