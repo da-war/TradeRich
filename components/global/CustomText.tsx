@@ -24,7 +24,7 @@ interface Props extends TextProps {
   onLayout?: (event: object) => void;
 }
 
-const CustomText: React.FC<Props> = ({
+const CText: React.FC<Props> = ({
   variant = "body",
   fontFamily = FONTS.regular,
   fontSize,
@@ -94,4 +94,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CustomText;
+export default CText;
