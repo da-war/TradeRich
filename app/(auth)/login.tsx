@@ -7,6 +7,8 @@ import { screenHeight, screenWidth } from "@/utils/Scaling";
 import SocialLoginButton from "@/components/auth/SocialLoginButton";
 
 import { Ionicons } from "@expo/vector-icons";
+import TouchableText from "@/components/auth/TouchableText";
+import BottomText from "@/components/auth/BottomText";
 
 const LoginScreen = () => {
   return (
@@ -42,6 +44,18 @@ const LoginScreen = () => {
         text="Continue with Google"
         onPress={() => {}}
       />
+
+      <View
+        style={{
+          flexDirection: "column",
+          gap: 10,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <TouchableText firstText="User other email ID " onPress={() => {}} />
+        <BottomText />
+      </View>
     </SafeAreaView>
   );
 };
