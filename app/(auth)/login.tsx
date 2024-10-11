@@ -15,10 +15,10 @@ const LoginScreen = () => {
     <SafeAreaView style={styles.main}>
       <View style={styles.container}>
         <View style={styles.topContainer}>
-          <CText fontFamily={FONTS.thin} variant="h1">
+          <CText fontFamily={FONTS.bold} variant="h1">
             Hello
           </CText>
-          <CText fontFamily={FONTS.thin} variant="h7">
+          <CText fontFamily={FONTS.thin} variant="h5">
             Invest • Pay • Loans
           </CText>
         </View>
