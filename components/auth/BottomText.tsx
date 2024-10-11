@@ -6,6 +6,7 @@ import { FONTS } from "@/constants";
 interface UnderlineProps {
   text: String;
 }
+
 const UnderlineText: React.FC<UnderlineProps> = ({ text }) => {
   return (
     <CustomText
